@@ -1,0 +1,28 @@
+.section{
+    display: flex; 
+    width: 100%; 
+}
+.section .card{
+    display: flex;
+    overflow: auto;
+    width: 1700px;
+    height: 618px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #202124;
+}
+@media (max-width: 790px){
+    .section{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .section .formulario{
+        margin: 20px;
+        padding: 60px 60px;
+        width: 100%;
+    }
+    .section .card{
+        height: 100%;
+        overflow: hidden;
+    }
+}

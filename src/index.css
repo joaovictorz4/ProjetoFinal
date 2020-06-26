@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  font-family: 'Open Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+  
+  background-color: #202124;
+}

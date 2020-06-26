@@ -1,0 +1,104 @@
+
+.form-body > *{
+    color: #fff;
+}
+.form-body{
+    padding: 10px;
+    width: 500px;
+    border-radius: 5px;
+}
+.form-body, 
+form input,
+textarea{
+    background-color: #202124
+}
+form p input,
+form p textarea,
+form p label,
+form p button{
+    color: #fff;
+    width: 100%;
+}
+textarea{
+    border: none;
+    resize: none;
+}
+form .large{
+    grid-column: 1/4;
+}
+.medium{
+    grid-column: 2/4;
+}
+form{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.form-body h1{
+    padding-bottom: 10px;
+    text-align: center;
+}
+form p{
+    margin: 10px;
+    align-self: center;
+    margin: 10px 5px;
+    padding: 0;
+}
+form input, textarea{
+    border: none;
+    border-bottom: 1px solid #35363A;
+}
+.form-body button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+
+/*                   ANIMATIONS            */
+
+form input:hover,
+form textarea:hover{
+    border-color: #000;
+    transition: 0.5s;
+}
+
+input,textarea{
+    transition: 0.5s;
+}
+
+form button:hover
+{
+    background-color:rgb(20, 20, 20);
+    transition: 0.5s;
+}
+
+form input:focus,
+form button:focus,
+form textarea{
+    outline: none;
+}
+input{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/*        MOBILE          */
+
+@media (max-width: 530px){
+    form{
+        display: block;
+    }
+    .form-body{
+        width: 100%;
+    }
+}
+
+@media (max-width: 790px){
+    .form-body{
+        width: 100%;
+    }
+}
