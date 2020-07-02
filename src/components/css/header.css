@@ -3,7 +3,8 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1b1c1f;
-    padding: 5px 18px;
+    padding: 5px 18px; 
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 @media (max-width: 880px){

@@ -41,7 +41,7 @@ class Text extends React.Component {
         return (
             <p className={this.props.class}>
                 <label>{this.props.children}</label>
-                <input type={this.props.type}></input>
+                <input type="password"></input>
             </p>
         )
     }
