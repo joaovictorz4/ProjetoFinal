@@ -60,15 +60,4 @@ class Stats extends React.Component {
     }
 }
 
-class Stats extends React.Component {
-
-    render() {
-        return (
-            <p className="stats">
-                {this.props.children}
-            </p>
-        )
-    }
-}
-
 export { Card, Stats }

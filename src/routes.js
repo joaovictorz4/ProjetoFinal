@@ -9,11 +9,13 @@ import Item from './pages/Item/item'
 import Lifeskill from './pages/Lifeskill/lifeskill'
 import Mob from './pages/Mob/mob'
 import Node from './pages/Node/node'
+import {Header1} from './components/header'
 
 
 export default ()=>{
     return(
         <BrowserRouter>
+            <Header1></Header1>
             <Switch>
                 <Route path="/" exact component={Index}/>
                 <Route path="/classe" component={Classe}/>

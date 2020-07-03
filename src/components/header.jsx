@@ -25,7 +25,7 @@ class Nav extends React.Component {
         )
     }
 }
-class Model1 extends React.Component {
+class Header1 extends React.Component {
     render() {
         return (
             <Header>
@@ -72,4 +72,4 @@ class Search extends React.Component {
     }
 }
 
-export { Header, ItemUl, Nav, ItemLink, Model1, Search }
+export { Header, ItemUl, Nav, ItemLink, Header1, Search }

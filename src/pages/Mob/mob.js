@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import Container from '../../components/Container.jsx'
-import {PopUp} from '../../components/popUp.js'
 import './mob.css'
 
 export default class mobs extends React.Component {
 
-
-    constructor(props){
-        super(props)
-    }
-    
 
     state = {
         mobs: []
