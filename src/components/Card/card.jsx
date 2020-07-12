@@ -16,9 +16,6 @@ export default class Card extends React.Component {
                 </TopCard>
                 <MiddleCard>
                     <Stats>
-                        {this.props.mob.descricao}
-                    </Stats>
-                    <Stats>
                         HP: {this.props.mob.hp} <br/>
                         Defesa: {this.props.mob.defesa} <br/>
                         Evasão: {this.props.mob.evasao} <br/>
@@ -27,6 +24,9 @@ export default class Card extends React.Component {
                         Skill Xp: {this.props.mob.skillxp} <br/>
                         Karma: {this.props.mob.karma} <br/>
                         Conhecimento: {this.props.mob.percentConhecimento}% <br/>
+                    </Stats>
+                    <Stats>
+                        {this.props.mob.descricao}
                     </Stats>
                 </MiddleCard>
                 <div className="bottom">
@@ -52,6 +52,58 @@ class ClasseCard extends React.Component {
                 <p>Nivel: {this.props.classe.nivel}</p>
                 <MiddleCard>
                     <img src={this.props.classe.url} alt=""/>
+                </MiddleCard>
+                <div className="bottom">
+                    <div className="flex">
+                        <button>Modificar</button>
+                        <button onClick={this.handleSubmit} >Deletar</button>
+                    </div>
+                </div>
+            </BodyCard>
+        )
+    }
+}
+class LifeskillCard extends React.Component {
+
+  
+    handleSubmit = () =>{
+        this.props.handleDelete(this.props.lifeskill._id)
+    }
+    render() {
+        return (
+            <BodyCard>
+                <h1>{this.props.lifeskill.nome}</h1>
+                <img src={this.props.lifeskill.url} alt=""/>
+                <MiddleCard>
+                    <p>Descrição: {this.props.lifeskill.descricao}</p>
+                </MiddleCard>
+                <div className="bottom">
+                    <div className="flex">
+                        <button>Modificar</button>
+                        <button onClick={this.handleSubmit} >Deletar</button>
+                    </div>
+                </div>
+            </BodyCard>
+        )
+    }
+}
+class ItemCard extends React.Component {
+
+  
+    handleSubmit = () =>{
+        this.props.handleDelete(this.props.item._id)
+    }
+    render() {
+        return (
+            <BodyCard>
+                <p>{this.props.item.id}</p>
+                <h1>{this.props.item.nome}</h1>
+                <p>Peso: {this.props.item.peso}</p>
+                <img src={this.props.item.url} alt=""/>
+                <MiddleCard>
+                    <p>Descrição: {this.props.item.descricao}</p>
+                    
+                    <p>Preço: {this.props.item.preco}</p>
                 </MiddleCard>
                 <div className="bottom">
                     <div className="flex">
@@ -112,4 +164,4 @@ class Stats extends React.Component {
     }
 }
 
-export { Card, Stats, ClasseCard }
+export { Card, Stats, ClasseCard, LifeskillCard, ItemCard }

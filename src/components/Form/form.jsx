@@ -152,5 +152,119 @@ class FormClasse extends React.Component {
         )
     }
 }
+class FormLifeSkill extends React.Component {
 
-export { FormClasse, Form1 }
+    state = {
+        nome: "",
+        descricao: "",
+        url: ""
+    }
+
+    handleSubmit = () =>{
+        const classe = {
+            nome: this.state.nome,
+            descricao: this.state.descricao,
+            url: this.state.url
+        }
+        this.props.handlePost(classe)
+    }
+    handleChange = (event) =>{
+        this.setState({
+            [event.target.id]: event.target.value
+        })
+    }
+
+
+    render() {
+        return (
+            <div class="form-body">
+                <h1>Registrar</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <p>
+                        <label>Nome</label>
+                        <input id="nome" type="text" value={this.state.nome} onChange={this.handleChange}/>
+                    </p>
+                    <p>
+                        <label>Img Link</label>
+                        <input id="url" type="text" value={this.state.url} onChange={this.handleChange}/>
+                    </p>
+                    <p className="large">
+                        <label>Descrição</label>
+                        <textarea id="descricao" onChange={this.handleChange} rows="5"></textarea>
+                    </p>
+                    <p className="large">
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
+            </div >
+        )
+    }
+}
+class FormItem extends React.Component {
+
+    state = {
+        'id': "",
+        'nome': "",
+        'peso': "",
+        'preco': "",
+        'descricao': "",
+        'url': ""
+    }
+
+    handleSubmit = () =>{
+        const item = {
+            id: this.state.id,
+            nome: this.state.nome,
+            peso: this.state.peso,
+            preco: this.state.preco,
+            descricao: this.state.descricao,
+            url: this.state.url
+        }
+        this.props.handlePost(item)
+    }
+    handleChange = (event) =>{
+        this.setState({
+            [event.target.id]: event.target.value
+        })
+    }
+
+
+    render() {
+        return (
+            <div class="form-body">
+                <h1>Registrar</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <p>
+                        <label>Id</label>
+                        <input id="id" type="text" value={this.state.id} onChange={this.handleChange}/>
+                    </p>
+                    <p>
+                        <label>Nome</label>
+                        <input id="nome" type="text" value={this.state.nome} onChange={this.handleChange}/>
+                    </p>
+                    <p>
+                        <label>Peso</label>
+                        <input id="peso" type="text" value={this.state.peso} onChange={this.handleChange}/>
+                    </p>
+                    <p>
+                        <label>Preço</label>
+                        <input id="preco" type="text" value={this.state.preco} onChange={this.handleChange}/>
+                    </p>
+                    <p>
+                        <label>Img Link</label>
+                        <input id="url" type="text" value={this.state.url} onChange={this.handleChange}/>
+                    </p>
+                    <p className="large">
+                        <label>Descrição</label>
+                        <textarea id="descricao" onChange={this.handleChange} rows="5"></textarea>
+                    </p>
+                    <p className="large">
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
+            </div >
+        )
+    }
+}
+
+export { FormClasse, Form1, FormLifeSkill, FormItem }
