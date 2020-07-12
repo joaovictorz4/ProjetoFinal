@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import Container from '../../components/Container.jsx'
 import './mob.css'
+import { Form1 } from '../../components/Form/form'
+import Card from '../../components/Card/card'
 
 export default class mobs extends React.Component {
 
@@ -11,30 +12,41 @@ export default class mobs extends React.Component {
     }
 
     componentDidMount = () => {
-        
         this.handleGet()
     }
 
 
     handleGet = () => {
-        axios.get("http://192.168.1.104:9090/api/mob").then(res => {
+        axios.get("http://localhost:9090/api/mob").then(res => {
             this.setState({ mobs: res.data })
         })
     }
     handlePost = (mob) => {
-        console.log(mob)
-        axios.post("http://192.168.1.104:9090/api/mob", mob).then(res => {
-            console.log(res)
-        })
+        axios.post("http://localhost:9090/api/mob", mob);
+        alert("salvo!")
     }
-
 
     render() {
         
         
         return (
-            <div>
-                <Container></Container>
+
+            <div className="container">
+                <div className="section">
+                    <div className="formulario">
+                        <Form1 handlePost={this.handlePost}></Form1>
+                    </div>
+                    <div className="card">
+                        {
+                            this.state.mobs.map(mob=>{
+                                return <Card mob={mob}></Card>
+                            })
+                        }
+                    </div>
+                </div>
+                <footer>
+
+                </footer>
             </div>
         )
     }

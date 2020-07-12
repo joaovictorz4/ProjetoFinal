@@ -1,8 +1,7 @@
 import React from 'react';
-import "./css/header.css"
+import "./header.css"
 import { Link } from 'react-router-dom'
-import logo from './img/logo-bdo.png'
-import procurar from './img/procurar.png'
+import logo from './logo-bdo.png'
 
 
 class Header extends React.Component {
@@ -37,9 +36,6 @@ class Header1 extends React.Component {
                     <ItemLink to="/mob">Mob</ItemLink>
                     <ItemLink to="/node">Node</ItemLink>
                 </Nav>
-                <Search placeholder="Search...">
-                    <img src={procurar} alt="img"></img>
-                </Search>
             </Header>
         )
     }

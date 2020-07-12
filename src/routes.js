@@ -9,7 +9,7 @@ import Item from './pages/Item/item'
 import Lifeskill from './pages/Lifeskill/lifeskill'
 import Mob from './pages/Mob/mob'
 import Node from './pages/Node/node'
-import {Header1} from './components/header'
+import {Header1} from './components/Header/header'
 
 
 export default ()=>{

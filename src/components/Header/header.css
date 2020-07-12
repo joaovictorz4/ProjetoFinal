@@ -43,6 +43,7 @@ header .link:hover{
     background-color: #292A2D;
 }
 .search-button{
+    border-radius: 5px;
     display: flex;
     margin: 5px;
 }
