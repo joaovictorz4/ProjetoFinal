@@ -115,6 +115,33 @@ class ItemCard extends React.Component {
         )
     }
 }
+class NodeCard extends React.Component {
+
+  
+    handleSubmit = () =>{
+        this.props.handleDelete(this.props.item._id)
+    }
+    render() {
+        return (
+            <BodyCard>
+                <p>{this.props.node.id}</p>
+                <h1>{this.props.node.nome}</h1>
+                <p>Região: {this.props.node.regiao}</p>
+                <img src={this.props.node.url} alt=""/>
+                <MiddleCard>
+                    <p>Gerente de Base: {this.props.node.gerentedebase}</p>
+                    <p>Custo: {this.props.node.custo}</p>
+                </MiddleCard>
+                <div className="bottom">
+                    <div className="flex">
+                        <button>Modificar</button>
+                        <button onClick={this.handleSubmit} >Deletar</button>
+                    </div>
+                </div>
+            </BodyCard>
+        )
+    }
+}
 class TopCard extends React.Component {
 
     render() {
@@ -164,4 +191,4 @@ class Stats extends React.Component {
     }
 }
 
-export { Card, Stats, ClasseCard, LifeskillCard, ItemCard }
+export { Card, Stats, ClasseCard, LifeskillCard, ItemCard, NodeCard }
