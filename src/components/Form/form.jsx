@@ -243,8 +243,8 @@ class FormItem extends React.Component {
                         <input id="nome" type="text" value={this.state.nome} onChange={this.handleChange}/>
                     </p>
                     <p>
-                        <label>Região</label>
-                        <input id="região" type="text" value={this.state.peso} onChange={this.handleChange}/>
+                        <label>Peso</label>
+                        <input id="peso" type="text" value={this.state.peso} onChange={this.handleChange}/>
                     </p>
                     <p>
                         <label>Preço</label>
